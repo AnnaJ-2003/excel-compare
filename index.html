@@ -1,0 +1,29 @@
+<select name="report_type">
+  <option value="asset">Asset List (Excel)</option>
+  <option value="user">User List (PDF)</option>
+</select>
+<input type="file" name="previous_file">
+<input type="file" name="current_file">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Asset Comparison</title>
+</head>
+<body>
+
+<h2>Upload Asset Excel Files</h2>
+
+<form action="compare.php" method="POST" enctype="multipart/form-data">
+
+    <label>Previous Asset List:</label><br>
+    <input type="file" name="previous_file" accept=".xls,.xlsx" required><br><br>
+
+    <label>Current Asset List:</label><br>
+    <input type="file" name="current_file" accept=".xls,.xlsx" required><br><br>
+
+    <button type="submit">Compare Assets</button>
+
+</form>
+
+</body>
+</html>
